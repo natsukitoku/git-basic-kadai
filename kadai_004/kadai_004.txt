@@ -1,0 +1,68 @@
+Last login: Thu Sep 21 19:11:55 on ttys000
+tokunaganatsuki@tokunaganatsukinoMacBook-Air ~ % pwd
+/Users/tokunaganatsuki
+tokunaganatsuki@tokunaganatsukinoMacBook-Air ~ % cd /Users/tokunaganatsuki/Desktop/TEST2
+tokunaganatsuki@tokunaganatsukinoMacBook-Air TEST2 % mkdir git_challenge
+tokunaganatsuki@tokunaganatsukinoMacBook-Air TEST2 % cd /Users/tokunaganatsuki/Desktop/TEST2/git_challenge
+tokunaganatsuki@tokunaganatsukinoMacBook-Air git_challenge % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /Users/tokunaganatsuki/Desktop/TEST2/git_challenge/.git/
+tokunaganatsuki@tokunaganatsukinoMacBook-Air git_challenge % touch hello_world.txt
+tokunaganatsuki@tokunaganatsukinoMacBook-Air git_challenge % git log
+fatal: your current branch 'master' does not have any commits yet
+tokunaganatsuki@tokunaganatsukinoMacBook-Air git_challenge % ls
+hello_world.txt
+tokunaganatsuki@tokunaganatsukinoMacBook-Air git_challenge % git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	hello_world.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+tokunaganatsuki@tokunaganatsukinoMacBook-Air git_challenge % git add hello_world.txt
+tokunaganatsuki@tokunaganatsukinoMacBook-Air git_challenge % git commit -m "hello_world.txtを追加"
+[master (root-commit) edaf1d0] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+tokunaganatsuki@tokunaganatsukinoMacBook-Air git_challenge % git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   hello_world.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+tokunaganatsuki@tokunaganatsukinoMacBook-Air git_challenge % git add hello_world.txt
+tokunaganatsuki@tokunaganatsukinoMacBook-Air git_challenge % git commit -m "日本語訳を追記"
+[master a405c98] 日本語訳を追記
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+tokunaganatsuki@tokunaganatsukinoMacBook-Air git_challenge % git log
+commit a405c9803a6df97518e8ddcffc383ff07941f379 (HEAD -> master)
+Author: natsukitoku <marron0831@outlook.jp>
+Date:   Fri Sep 22 10:45:31 2023 +0900
+
+    日本語訳を追記
+
+commit edaf1d0e6572449e6a01c4ed7a854e3caeff6902
+Author: natsukitoku <marron0831@outlook.jp>
+Date:   Fri Sep 22 10:43:45 2023 +0900
+
+    hello_world.txtを追加
+tokunaganatsuki@tokunaganatsukinoMacBook-Air git_challenge % 
